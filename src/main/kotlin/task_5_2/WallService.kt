@@ -5,7 +5,7 @@ import kotlin.random.Random
 
 object WallService {
     private var posts = emptyArray<Post>()
-    private var nextId: Int = 0
+    private var nextId: Int = 1
         get() = field++
 
     fun add(post: Post): Post {
@@ -26,23 +26,23 @@ object WallService {
                     true,
                     true,
                     true
-                    ),
+                ),
                 copyright = Copyright(
                     86,
-                "Copyright_link",
-                "Copyright_name",
-                "Copyright_type"
+                    "Copyright_link",
+                    "Copyright_name",
+                    "Copyright_type"
                 ),
                 likes = Likes(
                     6,
                     true,
                     true,
                     true
-                    ),
+                ),
                 reposts = Reposts(
                     3,
                     true
-                    ),
+                ),
                 views = Views(6),
                 postType = PostType.POST,
                 singerId = Random.nextInt(),
@@ -57,7 +57,8 @@ object WallService {
                     15,
                     "text",
                     true,
-                    EditMode.ALL),
+                    EditMode.ALL
+                ),
                 postponedId = Random.nextInt()
             )
             return true
