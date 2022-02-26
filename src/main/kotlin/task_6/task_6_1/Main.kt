@@ -1,7 +1,6 @@
 package task_6.task_6_1
 
 import task_6.task_6_1.models.*
-import task_6_1.models.*
 
 fun main(){
     val post = Post(
