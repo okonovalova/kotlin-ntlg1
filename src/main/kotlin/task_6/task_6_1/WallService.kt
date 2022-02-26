@@ -1,6 +1,7 @@
-package task_5_2
+package task_6.task_6_1
 
-import task_5_2.models.*
+import task_5_2.WallService
+import task_6.task_6_1.models.*
 import kotlin.random.Random
 
 object WallService {
@@ -9,7 +10,7 @@ object WallService {
         get() = field++
 
     fun add(post: Post): Post {
-        posts += post.copy(id = nextId)
+        posts += post.copy(id = task_6.task_6_1.WallService.nextId)
         return posts.last()
     }
 

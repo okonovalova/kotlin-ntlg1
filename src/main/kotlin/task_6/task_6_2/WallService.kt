@@ -1,6 +1,6 @@
-package task_5_2
+package task_6.task_6_2
 
-import task_5_2.models.*
+import task_6.task_6_2.models.*
 import kotlin.random.Random
 
 object WallService {
@@ -9,7 +9,7 @@ object WallService {
         get() = field++
 
     fun add(post: Post): Post {
-        posts += post.copy(id = nextId)
+        posts += post.copy(id = WallService.nextId)
         return posts.last()
     }
 
@@ -45,6 +45,10 @@ object WallService {
                 ),
                 views = Views(6),
                 postType = PostType.POST,
+                attachments = mutableListOf<Attachment>().apply {
+                    post.attachments?.let { this.addAll(it) }
+                    this.add(VideoAttachment(2, 1, "название1", "описание1", 12, 1010000101))
+                },
                 singerId = Random.nextInt(),
                 canPin = false,
                 canDelete = false,
@@ -61,8 +65,8 @@ object WallService {
                 ),
                 postponedId = Random.nextInt()
             )
-            val searchIndex: Int = posts.indexOf(searchResult)
-            posts[searchIndex] = newPost
+            val searchIndex: Int = WallService.posts.indexOf(searchResult)
+            WallService.posts[searchIndex] = newPost
             return true
         } else {
             return false
