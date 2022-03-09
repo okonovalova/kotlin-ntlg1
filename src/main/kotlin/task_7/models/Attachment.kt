@@ -1,4 +1,4 @@
-package task_7.exceptions.models
+package task_7.models
 
 abstract class Attachment(
     open val id: Int,
