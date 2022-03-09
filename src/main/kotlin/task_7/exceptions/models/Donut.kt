@@ -1,4 +1,4 @@
-package task_7.models
+package task_7.exceptions.models
 
 data class Donut(
     //запись доступна только платным подписчикам VK Donut;

@@ -1,6 +1,7 @@
 package task_7
 
 import task_7.exceptions.PostNotFoundException
+import task_7.exceptions.models.*
 import task_7.models.*
 import kotlin.random.Random
 

@@ -1,4 +1,4 @@
-package task_7.models
+package task_7.exceptions.models
 
 class GraffitiAttachment (
     override val id: Int,

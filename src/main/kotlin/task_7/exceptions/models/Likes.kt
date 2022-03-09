@@ -1,4 +1,4 @@
-package task_7.models
+package task_7.exceptions.models
 
 data class Likes(
     //число пользователей, которым понравилась запись;

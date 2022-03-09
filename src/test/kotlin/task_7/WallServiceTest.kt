@@ -1,10 +1,11 @@
 package task_7
 
+import org.junit.Assert
 import org.junit.Test
 
 import org.junit.Assert.*
 import task_7.exceptions.PostNotFoundException
-import task_7.models.*
+import task_7.exceptions.models.*
 
 class WallServiceTest {
 
@@ -297,9 +298,8 @@ class WallServiceTest {
         )
         WallService.add(post)
 
-        val comment = Comment(2,3,1,1644747109,"Some text",null,null)
+        val comment = Comment(2,0,1,1644747109,"Some text",null,null)
 
         WallService.createComment(comment)
-
     }
 }

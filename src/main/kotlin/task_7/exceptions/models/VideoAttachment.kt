@@ -1,4 +1,4 @@
-package task_7.models
+package task_7.exceptions.models
 
 class VideoAttachment(
     override val id: Int,
